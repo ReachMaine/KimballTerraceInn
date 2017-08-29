@@ -1,16 +1,17 @@
 <?php
-/* mods 
-	10Oct16 zig - add widget area above bottom-widgets for reach CTA 
+/* mods
+	10Oct16 zig - add widget area above bottom-widgets for reach CTA
  */
-	if (is_active_sidebar('reach-bottom-cta')) { 
+	if (is_active_sidebar('reach-bottom-cta')) {
 		echo '<footer id="reach-bottom-cta">';
 			echo '<div id="reach-bottom-cta-wrap" class="be-wrap be-row clearfix">';
-			dynamic_sidebar( 'reach-bottom-cta'); 
+			dynamic_sidebar( 'reach-bottom-cta');
 			echo '</div>';
 		echo '</footer>';
 	}
 	global $be_themes_data;
 	$post_id = be_get_page_id();
+	$fixed_footer = ( isset( $be_themes_data['fixed-footer'] ) && !empty( $be_themes_data['fixed-footer'] ) && be_is_fixed_footer_possible() ) ? true : false;
 	$show_bottom_widgets = get_post_meta($post_id, 'be_themes_bottom_widgets', true);
 	$show_footer_area = get_post_meta($post_id, 'be_themes_footer_area', true);
 	if($show_bottom_widgets != 'no') {
@@ -38,18 +39,21 @@
 			break;
 		}
 	}
+	if( $fixed_footer ) {?>
+		<div id = "be-fixed-footer-wrap">
+	<?php }
 	if( $show_widgets && $active_sidebar ) { ?>
 		<footer id="bottom-widgets">
 			<div id="bottom-widgets-wrap" class="be-wrap be-row clearfix">
 				<?php for($j = 1; $j <= $i; $j++) : ?>
 					<div class="<?php echo $col_class; ?> column-block clearfix">
-						<?php 
+						<?php
 							if ( is_active_sidebar( 'footer-widget-'.$j ) ) {
 								dynamic_sidebar( 'footer-widget-'.$j );
 							}
 						?>
 					</div>
-				<?php endfor; ?>	
+				<?php endfor; ?>
 			</div>
 		</footer>
 	<?php } ?>
@@ -57,31 +61,38 @@
 		<footer id="footer" class="<?php echo esc_attr( $be_themes_data['layout'] );?>">
 			<span class="footer-border <?php echo (($be_themes_data['footer-border-wrap']) ? 'be-wrap ' : '' );?>"></span>
 			<div id="footer-wrap" class=" <?php echo esc_attr( $be_themes_data['footer-style'] ); if(true == $be_themes_data['opt-footer-wrap']){?> be-wrap<?php } ?> clearfix">
-				<div class="footer-left-area"><?php  if($be_themes_data['footer-content-pos-left'] != 'none' ){ ?>
-					<div class="footer-content-inner-left"><?php
-							be_themes_get_footer_widget($be_themes_data['footer-content-pos-left']);
-						?>
-					</div><?php
-					}?>
+
+				<div class="footer-left-area">
+					<?php  if($be_themes_data['footer-content-pos-left'] != 'none' ) : ?>
+					<div class="footer-content-inner-left">
+						 <?php	be_themes_get_footer_widget($be_themes_data['footer-content-pos-left']); ?>
+					</div>
+					<?php endif; ?>
 				</div>
-				<div class="footer-center-area"><?php
-					if ($be_themes_data['footer-content-pos-center'] != 'none' ){ ?>
-					<div class="footer-content-inner-center"><?php
-							be_themes_get_footer_widget($be_themes_data['footer-content-pos-center']);
-						?>
-					</div><?php
-					}?>
+
+				<div class="footer-center-area">
+					<?php if ($be_themes_data['footer-content-pos-center'] != 'none' ) : ?>
+					<div class="footer-content-inner-center">
+						<?php be_themes_get_footer_widget($be_themes_data['footer-content-pos-center']); ?>
+					</div>
+					<?php endif; ?>
 				</div>
-				<div class="footer-right-area"><?php
-					if($be_themes_data['footer-content-pos-right'] != 'none' ){ ?>
-					<div class="footer-content-inner-right"><?php
-							be_themes_get_footer_widget($be_themes_data['footer-content-pos-right']);
-						?>
-					</div>	<?php
-					}?>
+
+				<div class="footer-right-area">
+					<?php if($be_themes_data['footer-content-pos-right'] != 'none' ) : ?>
+					<div class="footer-content-inner-right">
+						<?php be_themes_get_footer_widget($be_themes_data['footer-content-pos-right']); ?>
+					</div>
+					<?php endif; ?>
 				</div>
 			</div>
 		</footer> <?php
+	}
+
+	if( $fixed_footer ) {?>
+		</div>
+		<div id = "be-fixed-footer-placeholder"></div>
+	<?php
 	}
 	?>
 	<?php do_action('be_themes_after_footer'); ?>
@@ -104,6 +115,17 @@
 	</div>
 	<?php
 	}?>
+	<?php if( be_is_special_top_menu('page-stack-top') ) : ?>
+		</div>
+		<div class = "be-page-stack-container">
+			<div class="be-page-stack be-page-stack-empty">
+			</div>
+		</div>
+		<div class = "be-page-stack-container">
+			<div class="be-page-stack be-page-stack-empty">
+			</div>
+		</div>
+	<?php endif; ?>
 </div>
 
 <?php if( !empty($be_themes_data['google_analytics_code']) ) : ?>
