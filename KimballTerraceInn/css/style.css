@@ -57,6 +57,17 @@ input[type="submit"] {
   font-weight: bold;
   cursor: pointer; }
 
+/* css for table press */
+#tablepress-1 {
+  border: 1px solid black;
+  margin-bottom: 0px; }
+
+.tablepress-table-description-id-1 {
+  text-align: right;
+  font-style: italic;
+  padding-right: 8px;
+  font-size: .9em; }
+
 /*** slidebar in oshine slidebar is above main content *** */
 /*  header stuff - here */
 /*** styling of content */
