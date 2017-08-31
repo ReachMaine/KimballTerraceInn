@@ -68,9 +68,41 @@ input[type="submit"] {
   padding-right: 8px;
   font-size: .9em; }
 
+table.tablepress th {
+  text-transform: none; }
+
 /*** slidebar in oshine slidebar is above main content *** */
 /*  header stuff - here */
+#header #header-top-bar .top-bar-widgets a {
+  color: white;
+  font-size: 1.3em; }
+#header #header-inner-wrap {
+  background-color: transparent; }
+  #header #header-inner-wrap #navigation #menu > li > a {
+    text-shadow: 1px 1px #002d62;
+    padding-left: 20px;
+    padding-right: 20px; }
+  #header #header-inner-wrap #navigation #menu > li > a:hover {
+    text-shadow: none;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 4px; }
+  #header #header-inner-wrap #navigation #menu > li.current_page_item > a {
+    text-shadow: none;
+    background-color: white;
+    border-radius: 4px;
+    border: 1px solid #002d62;
+    -webkit-box-shadow: -1px 1px 2px 0px #757575;
+    -moz-box-shadow: -1px 1px 2px 0px #757575;
+    box-shadow: -1px 1px 2px 0px #757575; }
+  #header #header-inner-wrap #navigation #menu .sub-menu {
+    margin-top: -35px;
+    border-radius: 4px; }
+
 /*** styling of content */
+#content.right-sidebar-page {
+  padding-top: 45px;
+  padding-bottom: 45px; }
+
 /** sidebar
 
 /** footer **/

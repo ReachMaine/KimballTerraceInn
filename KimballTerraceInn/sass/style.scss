@@ -18,9 +18,51 @@ Version: 1.2
 
 }
 /*  header stuff - here */
+#header {
+	#header-top-bar { // top bar
+		.top-bar-widgets {
+			a {
+				color: white;
+				font-size: 1.3em;
+			}
+		}
+	}
+	#header-inner-wrap { // header = logo and menu
+		background-color: transparent;
+		#navigation {
+			#menu > li > a { //li:not(.current_page_item) > a
+				text-shadow: 1px 1px $kti-dark-blue;
+				padding-left: 20px;
+				padding-right: 20px;
+			}
+			#menu > li > a:hover{
+				text-shadow: none;
+				background-color: rgba(255, 255, 255, 0.5);
+				border-radius: 4px;
+			}
+			#menu > li.current_page_item  > a {
+				text-shadow: none;
+				background-color: rgba(255, 255, 255, 1);
+				border-radius: 4px;
+				border: 1px solid $kti-dark-blue;
+				-webkit-box-shadow: -1px 1px 2px 0px rgba(117,117,117,1);
+				-moz-box-shadow: -1px 1px 2px 0px rgba(117,117,117,1);
+				box-shadow: -1px 1px 2px 0px rgba(117,117,117,1);
+
+			}
+			#menu .sub-menu {
+				margin-top: -35px;
+				border-radius: 4px;
+			}
+		}
+	}
+}
 
 /*** styling of content */
-
+#content.right-sidebar-page {
+	padding-top: 45px;
+	padding-bottom: 45px;
+}
 /** sidebar
 
 /** footer **/
