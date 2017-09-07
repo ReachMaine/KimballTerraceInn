@@ -13,5 +13,12 @@
 table.tablepress {
   th {
     text-transform: none;
+    background-color: $kti-light-blue;
+  }
+  td.column-1 {
+    text-align: right;
+  }
+  td:not(.column-1) {
+    text-align: center;
   }
 }
