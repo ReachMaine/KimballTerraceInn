@@ -61,7 +61,7 @@ Version: 1.2
 
 /*** styling of content */
 #content.right-sidebar-page {
-	padding-top: 45px;
+	padding-top: 45px;  // small at mobile in media
 	padding-bottom: 45px;
 }
 /** sidebar
@@ -73,6 +73,7 @@ Version: 1.2
 	margin-top: 0px;
 	margin-bottom: 0px;
 	background: url(images/waves-background.jpg) no-repeat scroll center center;
+	background-
 	.widget {
 		margin-bottom: 0px;
 	}
@@ -87,5 +88,12 @@ Version: 1.2
     	padding-right: 4px;
     }
 }
+#back-to-top,
+.menu-controls.mobile-nav-controller {
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+
 /* *** keep this at the end *** */
 @import "partials/media";

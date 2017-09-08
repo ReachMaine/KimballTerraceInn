@@ -132,7 +132,8 @@ table.tablepress td:not(.column-1) {
   margin-top: 0px;
   margin-bottom: 0px;
   background: url(images/waves-background.jpg) no-repeat scroll center center; }
-  #reach-bottom-cta .widget {
+  #reach-bottom-cta background-
+  .widget {
     margin-bottom: 0px; }
 
 #footer a.reach-logo {
@@ -141,5 +142,29 @@ table.tablepress td:not(.column-1) {
   content: url("images/reach-favicon.png");
   padding-right: 4px; }
 
+#back-to-top,
+.menu-controls.mobile-nav-controller {
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px; }
+
 /* *** keep this at the end *** */
 /* **** media **** */
+@media only screen and (max-width: 960px) {
+  #header #header-controls-right .mobile-nav-controller {
+    padding-top: 15px; } }
+@media only screen and (max-width: 767px) {
+  #hero-section .hero-section-wrap.be-bg-cover {
+    height: 300px !important; }
+
+  .tatsu-row-wrap.tatsu-eq-cols .tatsu-column {
+    min-height: initial; }
+
+  #content.right-sidebar-page {
+    padding-top: 20px;
+    padding-bottom: 20px; }
+
+  #right-sidebar.sidebar-widgets,
+  #left-sidebar.sidebar-widgets {
+    margin-top: 0px;
+    margin-bottom: 0px; } }

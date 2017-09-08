@@ -16,11 +16,39 @@
 }
 
 @media only screen and (max-width: 960px) {
-
+  // mobile menu shows here.
+  #header {
+    #header-controls-right {
+      .mobile-nav-controller {
+        padding-top: 15px;
+      }
+    }
+  }
 }
 @media only screen and (max-width: 767px) { // mobile - mobile menu shows here.
 	// hide-mobile available from tatsu
+
+  // set hero images shorter
+  #hero-section .hero-section-wrap.be-bg-cover{
+    height: 300px!important;
+  }
+  // override tatsu equal columns
+  .tatsu-row-wrap.tatsu-eq-cols .tatsu-column {
+    min-height: initial;
+  }
+  //
+  #content.right-sidebar-page {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  // too airy for mobile
+  #right-sidebar.sidebar-widgets,
+  #left-sidebar.sidebar-widgets  {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
 }
 
 @media only screen and (min-width: 480px) and (max-width: 767px) { // mobile 480
+  // logo gets really small here.
 }
