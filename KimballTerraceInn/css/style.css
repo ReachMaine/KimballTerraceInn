@@ -76,6 +76,23 @@ table.tablepress td.column-1 {
 table.tablepress td:not(.column-1) {
   text-align: center; }
 
+.wpcf7-form {
+  /*input.wpcf7-form-control.wpcf7-submit {
+    padding: 18px;
+    border: 0px;
+    border: none;
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }*/ }
+  .wpcf7-form textarea {
+    background-color: white; }
+
+.wpcf7 .wpcf7-form .wpcf7-response-output.wpcf7-mail-sent-ok {
+  color: white;
+  background-color: #002d62;
+  font-weight: bold; }
+
 /*** slidebar in oshine slidebar is above main content *** */
 /*  header stuff - here */
 #header #header-top-bar .top-bar-widgets a {
