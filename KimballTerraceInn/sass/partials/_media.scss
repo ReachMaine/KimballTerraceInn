@@ -50,5 +50,20 @@
 }
 
 @media only screen and (min-width: 480px) and (max-width: 767px) { // mobile 480
-  // logo gets really small here.
+
+}
+@media only screen and (max-width: 479px) {
+    // logo gets really small here.
+    #header-wrap {
+      max-width: 90%;
+      .logo {
+        max-width: 65%;
+      }
+      #header-controls-right {
+        .mobile-nav-controller-wrap {
+          margin-left: 0px;
+        }
+      }
+    }
+
 }

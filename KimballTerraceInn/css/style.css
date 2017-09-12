@@ -168,3 +168,10 @@ table.tablepress td:not(.column-1) {
   #left-sidebar.sidebar-widgets {
     margin-top: 0px;
     margin-bottom: 0px; } }
+@media only screen and (max-width: 479px) {
+  #header-wrap {
+    max-width: 90%; }
+    #header-wrap .logo {
+      max-width: 65%; }
+    #header-wrap #header-controls-right .mobile-nav-controller-wrap {
+      margin-left: 0px; } }
