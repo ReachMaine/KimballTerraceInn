@@ -125,6 +125,9 @@ table.tablepress td:not(.column-1) {
   padding-top: 45px;
   padding-bottom: 45px; }
 
+.gform_wrapper textarea {
+  background-color: white; }
+
 /** sidebar
 
 /** footer **/
