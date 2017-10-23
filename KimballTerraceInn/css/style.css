@@ -117,7 +117,7 @@ table.tablepress td:not(.column-1) {
     -moz-box-shadow: -1px 1px 2px 0px #757575;
     box-shadow: -1px 1px 2px 0px #757575; }
   #header #header-inner-wrap #navigation #menu .sub-menu {
-    margin-top: -35px;
+    margin-top: -20px;
     border-radius: 4px; }
 
 /*** styling of content */
