@@ -1,0 +1,41 @@
+/* gravity forms print styling
+* uses 'gform_print_styles' filter to add this
+*/
+td.entry-view-field-name {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+td.entry-view-field-value {
+  padding-top: 2px;
+}
+
+td.entry-view-field-value ul.bulleted {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.map-it-link {
+  display: none;
+}
+
+tbody tr:first-child,
+tbody tr:nth-child(3),
+tbody tr:nth-child(5),
+tbody tr:nth-child(7),
+tbody tr:nth-child(31),
+tbody tr:nth-child(33),
+tbody tr:nth-child(35) {
+  display: none;
+}
+tbody tr:nth-child(2) td.entry-view-field-value,
+tbody tr:nth-child(4) td.entry-view-field-value,
+tbody tr:nth-child(6) td.entry-view-field-value,
+tbody tr:nth-child(8) td.entry-view-field-value,
+tbody tr:nth-child(32) td.entry-view-field-value,
+tbody tr:nth-child(34) td.entry-view-field-value,
+tbody tr:nth-child(36) td.entry-view-field-value {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  border-bottom: 0px;
+}/*# sourceMappingURL=gforms_print.css.map */
